@@ -40,8 +40,30 @@ namespace Basic_Expense_Tracker
 
             txtDescription.Clear();
             txtAmount.Clear();
+            txtAmount.Clear();
+            txtAmount.Clear();
+            txtAmount.Clear();
+            txtAmount.Clear();
 
         }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            txtDescription.Clear();
+            txtAmount.Clear();
+            dtpDate.Value = DateTime.Today;
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            if (lstExpenses.SelectedIndex != -1)
+            {
+                lstExpenses.Items.RemoveAt(lstExpenses.SelectedIndex);
+            }
+            else
+            {
+                MessageBox.Show("Please select an expense to delete.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
